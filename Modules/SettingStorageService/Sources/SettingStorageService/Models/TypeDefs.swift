@@ -7,4 +7,5 @@
 
 import Foundation
 
-typealias OnBoardingCheckCallback = @Sendable () -> Bool
+public typealias OnBoardingCheckCallback = @Sendable () -> Bool
+public typealias OnBoardingSetCallback = @Sendable (Bool) -> Void

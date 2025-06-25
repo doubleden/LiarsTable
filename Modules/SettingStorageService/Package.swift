@@ -19,6 +19,12 @@ let package = Package(
             name: "SettingStorageService",
             dependencies: [.product (name:"Dependencies", package: "swift-dependencies")]
         ),
-
+        .target(
+            name: "SettingStorageServiceLive",
+            dependencies: [
+                .product (name:"Dependencies", package: "swift-dependencies"),
+                "SettingStorageService"
+            ]
+        )
     ]
 )

@@ -9,8 +9,13 @@ import Dependencies
 
 extension SettingStorageService: TestDependencyKey {
     public static var testValue: Self {
-        Self {
-            return true
-        }
+        Self(
+            checkOnBoardingState: {
+                return true
+            },
+            setOnBoardingState: { _ in
+                
+            }
+        )
     }
 }

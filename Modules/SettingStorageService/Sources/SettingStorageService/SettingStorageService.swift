@@ -1,8 +1,15 @@
 
 public struct SettingStorageService: Sendable {
-    var checkOnBoardingState: OnBoardingCheckCallback
+    public static let keyName = "onBoardingState_flag"
     
-    init(checkOnBoardingState: @escaping OnBoardingCheckCallback) {
+    public var checkOnBoardingState: OnBoardingCheckCallback
+    public var setOnBoardingState: OnBoardingSetCallback
+    
+    public init(
+        checkOnBoardingState: @escaping OnBoardingCheckCallback,
+        setOnBoardingState: @escaping OnBoardingSetCallback
+    ) {
         self.checkOnBoardingState = checkOnBoardingState
+        self.setOnBoardingState = setOnBoardingState
     }
 }
