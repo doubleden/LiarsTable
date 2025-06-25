@@ -10,15 +10,23 @@ let package = Package(
         .library(name: "AppFeature", targets: ["AppFeature"]),
     ],
     dependencies: [
+        .package(path: "../SettingStorageService"),
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.20.2")
     ],
     targets: [
         .target(
             name: "AppFeature",
             dependencies: [
-                .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+                .product(name: "SettingStorageServiceLive", package: "SettingStorageService")
             ]
         ),
-
+        .testTarget(
+            name: "AppFeatureTests",
+            dependencies: [
+                "AppFeature",
+                .product(name: "SettingStorageService", package: "SettingStorageService")
+            ]
+        )
     ]
 )

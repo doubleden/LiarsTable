@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "SettingStorageService",
             targets: ["SettingStorageService"]),
+        .library(
+            name: "SettingStorageServiceLive",
+            targets: ["SettingStorageServiceLive"])
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.9.2")
