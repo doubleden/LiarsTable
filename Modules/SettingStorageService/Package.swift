@@ -11,8 +11,8 @@ let package = Package(
             name: "SettingStorageService",
             targets: ["SettingStorageService"]),
         .library(
-            name: "SettingStorageServiceLive",
-            targets: ["SettingStorageServiceLive"])
+            name: "SettingStorageServiceKey",
+            targets: ["SettingStorageServiceKey"])
     ],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.9.2")
@@ -23,7 +23,7 @@ let package = Package(
             dependencies: [.product (name:"Dependencies", package: "swift-dependencies")]
         ),
         .target(
-            name: "SettingStorageServiceLive",
+            name: "SettingStorageServiceKey",
             dependencies: [
                 .product (name:"Dependencies", package: "swift-dependencies"),
                 "SettingStorageService"

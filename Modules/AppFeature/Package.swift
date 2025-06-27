@@ -18,7 +18,7 @@ let package = Package(
             name: "AppFeature",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-                .product(name: "SettingStorageServiceLive", package: "SettingStorageService")
+                .product(name: "SettingStorageServiceKey", package: "SettingStorageService")
             ]
         ),
         .testTarget(

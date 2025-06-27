@@ -22,11 +22,9 @@ public enum SettingStorageServiceKey: DependencyKey {
     static public let testValue = SettingStorageService(
         checkOnBoardingState: {
             print("print did test")
-            return true
+            return false
         },
-        setOnBoardingState: { _ in
-            
-        }
+        setOnBoardingState: { _ in }
     )
 }
 
