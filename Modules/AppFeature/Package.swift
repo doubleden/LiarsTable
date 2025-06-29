@@ -11,6 +11,8 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../SettingStorageService"),
+        .package(path: "../OnBoardingFeature"),
+        .package(path: "../AuthorizedFeature"),
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.20.2")
     ],
     targets: [
@@ -18,7 +20,9 @@ let package = Package(
             name: "AppFeature",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-                .product(name: "SettingStorageServiceKey", package: "SettingStorageService")
+                .product(name: "SettingStorageServiceKey", package: "SettingStorageService"),
+                .product(name: "OnBoardingFeature", package: "OnBoardingFeature"),
+                .product(name: "AuthorizedFeature", package: "AuthorizedFeature")
             ]
         ),
         .testTarget(

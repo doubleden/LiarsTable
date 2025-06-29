@@ -13,6 +13,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0524AB5B2E0F1B6300717DB2 /* OnBoardingFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OnBoardingFeature; path = Modules/OnBoardingFeature; sourceTree = "<group>"; };
+		0524AB5C2E0F1C4D00717DB2 /* AuthorizedFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AuthorizedFeature; path = Modules/AuthorizedFeature; sourceTree = "<group>"; };
 		05A70D0A2E0C1D4D007E9937 /* LiarsTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiarsTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A70D182E0C20A7007E9937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A70D192E0C20A7007E9937 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 				05A70D1B2E0C20A7007E9937 /* LiarsTable */,
 				05A70D202E0C26F6007E9937 /* SettingStorageService */,
 				05A70D1F2E0C22BE007E9937 /* AppFeature */,
+				0524AB5B2E0F1B6300717DB2 /* OnBoardingFeature */,
+				0524AB5C2E0F1C4D00717DB2 /* AuthorizedFeature */,
 				05A70D0B2E0C1D4D007E9937 /* Products */,
 			);
 			sourceTree = "<group>";

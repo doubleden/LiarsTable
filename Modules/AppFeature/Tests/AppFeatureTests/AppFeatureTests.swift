@@ -10,43 +10,41 @@ import XCTest
 import SettingStorageService
 
 @testable import AppFeature
+import OnBoardingFeature
+import AuthorizedFeature
 
 @MainActor
 final class AppFeatureTests: XCTestCase {
     
-    func testOnBoardingChangeValueAfterLaunch() async {
-        let initialStateWithUncompletedOnBoarding = AppFeature.State(isOnBoardingCompleted: false)
+    func testShowOnBoardingIfItWasNotCompleted() async {
+        let initialStateWithUncompletedOnBoarding = AppFeature.State()
+        
         let store = TestStore(initialState: initialStateWithUncompletedOnBoarding) {
             AppFeature()
         } withDependencies: {
-            $0.settingStorageService.checkOnBoardingState = { true }
+            $0.settingStorageService.checkIsOnBoardingState = { false }
         }
         
-        await store.send(.checkOnBoardingCompletion) {
-            $0.isOnBoardingCompleted = true
+        await store.send(.checkOnBoardingCompletion)
+        
+        await store.receive(\.navigateToOnBoarding) {
+            $0.destination = .onBoarding(OnBoardingFeature.State())
         }
     }
     
-    func testSetValueAfterCompletedOnBoarding() async {
-        final class TestContainer: @unchecked Sendable {
-            var userDefaultsFlag = false
-        }
-        
-        let container = TestContainer()
-        let initialStateWithUncompletedOnBoarding = AppFeature.State(isOnBoardingCompleted: false)
+    func testShowOnBoardingIfItWasCompleted() async {
+        let initialStateWithUncompletedOnBoarding = AppFeature.State()
         
         let store = TestStore(initialState: initialStateWithUncompletedOnBoarding) {
             AppFeature()
         } withDependencies: {
-            $0.settingStorageService.setOnBoardingState =  { newValue in
-                container.userDefaultsFlag = newValue
-            }
+            $0.settingStorageService.checkIsOnBoardingState = { true }
         }
         
-        await store.send(.setOnBoardingCompletion(true)) {
-            $0.isOnBoardingCompleted = true
-        }
+        await store.send(.checkOnBoardingCompletion)
         
-        XCTAssertEqual(container.userDefaultsFlag, true)
+        await store.receive(\.navigateToAuthorized) {
+            $0.destination = .authorized(AuthorizedFeature.State())
+        }
     }
 }

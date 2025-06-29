@@ -1,33 +1,48 @@
 import ComposableArchitecture
+import OnBoardingFeature
+import AuthorizedFeature
 import SettingStorageServiceKey
 
 @Reducer
-struct  AppFeature {
+public struct AppFeature {
     
     @ObservableState
-    struct State: Equatable {
-        var isOnBoardingCompleted = false
+    public struct State: Equatable {
+        @Presents var destination: AppFeatureDestination.State?
     }
     
-    enum Action {
+    public enum Action {
+        case destinationAction(PresentationAction<AppFeatureDestination.Action>)
         case checkOnBoardingCompletion
-        case setOnBoardingCompletion(Bool)
+        case navigateToOnBoarding
+        case navigateToAuthorized
     }
     
     @Dependency(\.settingStorageService) var settingStorageService
     
-    var body: some Reducer <State, Action> {
+    public var body: some Reducer <State, Action> {
         Reduce { state, action in
             switch action {
             case .checkOnBoardingCompletion:
-                state.isOnBoardingCompleted = settingStorageService.checkOnBoardingState()
-                return .none
+                return settingStorageService.checkIsOnBoardingState()
+                ? .send(.navigateToAuthorized)
+                : .send(.navigateToOnBoarding)
                 
-            case .setOnBoardingCompletion(let newValue):
-                settingStorageService.setOnBoardingState(newValue)
-                state.isOnBoardingCompleted = newValue
-                return .none 
+            case .navigateToAuthorized:
+                state.destination = .authorized(AuthorizedFeature.State())
+                return .none
+            case .navigateToOnBoarding:
+                state.destination = .onBoarding(OnBoardingFeature.State())
+                return .none
+            case .destinationAction(.presented(.onBoarding(.doneOnBoarding))):
+                settingStorageService.setOnBoardingState(true)
+                return .send(.checkOnBoardingCompletion)
+            default:
+                return .none
             }
         }
+        .ifLet(\.$destination, action: \.destinationAction)
     }
+    
+    public init() {}
 }
