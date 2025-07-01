@@ -6,16 +6,14 @@
 //
 
 import ComposableArchitecture
-import OnBoardingFeature
-import AuthorizedFeature
 
 @Reducer
-public enum AppFeatureDestination {
+enum AppFeatureDestination {
     case onBoarding(OnBoardingFeature)
     case authorized(AuthorizedFeature)
     
     @ObservableState
-    public enum State: CaseReducerState, Equatable {
+    enum State: CaseReducerState, Equatable {
         public typealias StateReducer = AppFeatureDestination
         
         case onBoarding(OnBoardingFeature.State)

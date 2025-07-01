@@ -1,17 +1,14 @@
 import ComposableArchitecture
-import OnBoardingFeature
-import AuthorizedFeature
-import SettingStorageServiceKey
+import SettingStorageService
 
 @Reducer
-public struct AppFeature {
-    
+struct AppFeature {
     @ObservableState
-    public struct State: Equatable {
+    struct State: Equatable {
         @Presents var destination: AppFeatureDestination.State?
     }
     
-    public enum Action {
+    enum Action {
         case destinationAction(PresentationAction<AppFeatureDestination.Action>)
         case checkOnBoardingCompletion
         case navigateToOnBoarding
@@ -20,7 +17,7 @@ public struct AppFeature {
     
     @Dependency(\.settingStorageService) var settingStorageService
     
-    public var body: some Reducer <State, Action> {
+    var body: some Reducer <State, Action> {
         Reduce { state, action in
             switch action {
             case .checkOnBoardingCompletion:
@@ -43,6 +40,4 @@ public struct AppFeature {
         }
         .ifLet(\.$destination, action: \.destinationAction)
     }
-    
-    public init() {}
 }

@@ -1,25 +1,20 @@
 //
-//  File.swift
-//  AppFeature
+//  LiarsTableTests.swift
+//  LiarsTableTests
 //
-//  Created by Denis Denisov on 25/6/25.
+//  Created by Denis Denisov on 1/7/25.
 //
 
 import ComposableArchitecture
 import XCTest
-import SettingStorageService
 
-@testable import AppFeature
-import OnBoardingFeature
-import AuthorizedFeature
+@testable import LiarsTable
 
 @MainActor
 final class AppFeatureTests: XCTestCase {
     
     func testShowOnBoardingIfItWasNotCompleted() async {
-        let initialStateWithUncompletedOnBoarding = AppFeature.State()
-        
-        let store = TestStore(initialState: initialStateWithUncompletedOnBoarding) {
+        let store = TestStore(initialState: AppFeature.State()) {
             AppFeature()
         } withDependencies: {
             $0.settingStorageService.checkIsOnBoardingState = { false }
@@ -31,11 +26,8 @@ final class AppFeatureTests: XCTestCase {
             $0.destination = .onBoarding(OnBoardingFeature.State())
         }
     }
-    
     func testShowOnBoardingIfItWasCompleted() async {
-        let initialStateWithUncompletedOnBoarding = AppFeature.State()
-        
-        let store = TestStore(initialState: initialStateWithUncompletedOnBoarding) {
+        let store = TestStore(initialState: AppFeature.State()) {
             AppFeature()
         } withDependencies: {
             $0.settingStorageService.checkIsOnBoardingState = { true }

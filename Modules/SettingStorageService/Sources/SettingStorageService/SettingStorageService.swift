@@ -5,6 +5,9 @@
 //  Created by Denis Denisov on 25/6/25.
 //
 
+public typealias CheckOnBoardingCallback = @Sendable () -> Bool
+public typealias SetOnBoardingCallback = @Sendable (Bool) -> Void
+
 public struct SettingStorageService: Sendable {
     public static let keyName = "onBoardingState_flag"
     

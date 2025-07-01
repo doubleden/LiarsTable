@@ -7,41 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053814E82E1406FF00E7CEFB /* AppFeatureDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053814E62E1406FF00E7CEFB /* AppFeatureDestination.swift */; };
+		053814E92E1406FF00E7CEFB /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053814E52E1406FF00E7CEFB /* AppFeature.swift */; };
+		053814F02E14073500E7CEFB /* OnBoardingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053814EE2E14073500E7CEFB /* OnBoardingFeature.swift */; };
+		053814F32E14073A00E7CEFB /* AuthorizedFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053814F12E14073A00E7CEFB /* AuthorizedFeature.swift */; };
+		053814F62E14078600E7CEFB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 053814F52E14078600E7CEFB /* ComposableArchitecture */; };
+		0538151E2E1416ED00E7CEFB /* SettingStorageService in Frameworks */ = {isa = PBXBuildFile; productRef = 0538151D2E1416ED00E7CEFB /* SettingStorageService */; };
 		05A70D1C2E0C20A7007E9937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A70D182E0C20A7007E9937 /* Assets.xcassets */; };
 		05A70D1D2E0C20A7007E9937 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A70D192E0C20A7007E9937 /* ContentView.swift */; };
 		05A70D1E2E0C20A7007E9937 /* LiarsTableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A70D1A2E0C20A7007E9937 /* LiarsTableApp.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0538150F2E140E9800E7CEFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A70D022E0C1D4D007E9937 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05A70D092E0C1D4D007E9937;
+			remoteInfo = LiarsTable;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0524AB5B2E0F1B6300717DB2 /* OnBoardingFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OnBoardingFeature; path = Modules/OnBoardingFeature; sourceTree = "<group>"; };
-		0524AB5C2E0F1C4D00717DB2 /* AuthorizedFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AuthorizedFeature; path = Modules/AuthorizedFeature; sourceTree = "<group>"; };
+		053814E52E1406FF00E7CEFB /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		053814E62E1406FF00E7CEFB /* AppFeatureDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureDestination.swift; sourceTree = "<group>"; };
+		053814EE2E14073500E7CEFB /* OnBoardingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFeature.swift; sourceTree = "<group>"; };
+		053814F12E14073A00E7CEFB /* AuthorizedFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedFeature.swift; sourceTree = "<group>"; };
+		0538150B2E140E9800E7CEFB /* LiarsTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiarsTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A70D0A2E0C1D4D007E9937 /* LiarsTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiarsTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A70D182E0C20A7007E9937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A70D192E0C20A7007E9937 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05A70D1A2E0C20A7007E9937 /* LiarsTableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiarsTableApp.swift; sourceTree = "<group>"; };
-		05A70D1F2E0C22BE007E9937 /* AppFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AppFeature; path = Modules/AppFeature; sourceTree = "<group>"; };
 		05A70D202E0C26F6007E9937 /* SettingStorageService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SettingStorageService; path = Modules/SettingStorageService; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0538150C2E140E9800E7CEFB /* LiarsTableTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LiarsTableTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		05A70D072E0C1D4D007E9937 /* Frameworks */ = {
+		053815082E140E9800E7CEFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05A70D072E0C1D4D007E9937 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053814F62E14078600E7CEFB /* ComposableArchitecture in Frameworks */,
+				0538151E2E1416ED00E7CEFB /* SettingStorageService in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053814E72E1406FF00E7CEFB /* AppFeature */ = {
+			isa = PBXGroup;
+			children = (
+				053814E52E1406FF00E7CEFB /* AppFeature.swift */,
+				053814E62E1406FF00E7CEFB /* AppFeatureDestination.swift */,
+			);
+			path = AppFeature;
+			sourceTree = "<group>";
+		};
+		053814EF2E14073500E7CEFB /* OnBoardingFeature */ = {
+			isa = PBXGroup;
+			children = (
+				053814EE2E14073500E7CEFB /* OnBoardingFeature.swift */,
+			);
+			path = OnBoardingFeature;
+			sourceTree = "<group>";
+		};
+		053814F22E14073A00E7CEFB /* AuthorizedFeature */ = {
+			isa = PBXGroup;
+			children = (
+				053814F12E14073A00E7CEFB /* AuthorizedFeature.swift */,
+			);
+			path = AuthorizedFeature;
+			sourceTree = "<group>";
+		};
 		05A70D012E0C1D4D007E9937 = {
 			isa = PBXGroup;
 			children = (
 				05A70D1B2E0C20A7007E9937 /* LiarsTable */,
+				0538150C2E140E9800E7CEFB /* LiarsTableTests */,
 				05A70D202E0C26F6007E9937 /* SettingStorageService */,
-				05A70D1F2E0C22BE007E9937 /* AppFeature */,
-				0524AB5B2E0F1B6300717DB2 /* OnBoardingFeature */,
-				0524AB5C2E0F1C4D00717DB2 /* AuthorizedFeature */,
 				05A70D0B2E0C1D4D007E9937 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				05A70D0A2E0C1D4D007E9937 /* LiarsTable.app */,
+				0538150B2E140E9800E7CEFB /* LiarsTableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +118,9 @@
 			children = (
 				05A70D1A2E0C20A7007E9937 /* LiarsTableApp.swift */,
 				05A70D192E0C20A7007E9937 /* ContentView.swift */,
+				053814E72E1406FF00E7CEFB /* AppFeature */,
+				053814EF2E14073500E7CEFB /* OnBoardingFeature */,
+				053814F22E14073A00E7CEFB /* AuthorizedFeature */,
 				05A70D182E0C20A7007E9937 /* Assets.xcassets */,
 			);
 			path = LiarsTable;
@@ -67,6 +129,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0538150A2E140E9800E7CEFB /* LiarsTableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 053815112E140E9800E7CEFB /* Build configuration list for PBXNativeTarget "LiarsTableTests" */;
+			buildPhases = (
+				053815072E140E9800E7CEFB /* Sources */,
+				053815082E140E9800E7CEFB /* Frameworks */,
+				053815092E140E9800E7CEFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				053815102E140E9800E7CEFB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0538150C2E140E9800E7CEFB /* LiarsTableTests */,
+			);
+			name = LiarsTableTests;
+			packageProductDependencies = (
+			);
+			productName = LiarsTableTests;
+			productReference = 0538150B2E140E9800E7CEFB /* LiarsTableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		05A70D092E0C1D4D007E9937 /* LiarsTable */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05A70D152E0C1D4E007E9937 /* Build configuration list for PBXNativeTarget "LiarsTable" */;
@@ -81,6 +166,8 @@
 			);
 			name = LiarsTable;
 			packageProductDependencies = (
+				053814F52E14078600E7CEFB /* ComposableArchitecture */,
+				0538151D2E1416ED00E7CEFB /* SettingStorageService */,
 			);
 			productName = LiarsTable;
 			productReference = 05A70D0A2E0C1D4D007E9937 /* LiarsTable.app */;
@@ -96,6 +183,10 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					0538150A2E140E9800E7CEFB = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 05A70D092E0C1D4D007E9937;
+					};
 					05A70D092E0C1D4D007E9937 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -110,17 +201,29 @@
 			);
 			mainGroup = 05A70D012E0C1D4D007E9937;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				053814F42E14078600E7CEFB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				0538151C2E1416E100E7CEFB /* XCLocalSwiftPackageReference "Modules/SettingStorageService" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 05A70D0B2E0C1D4D007E9937 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				05A70D092E0C1D4D007E9937 /* LiarsTable */,
+				0538150A2E140E9800E7CEFB /* LiarsTableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		053815092E140E9800E7CEFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A70D082E0C1D4D007E9937 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,18 +235,83 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		053815072E140E9800E7CEFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A70D062E0C1D4D007E9937 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053814F02E14073500E7CEFB /* OnBoardingFeature.swift in Sources */,
+				053814E82E1406FF00E7CEFB /* AppFeatureDestination.swift in Sources */,
+				053814E92E1406FF00E7CEFB /* AppFeature.swift in Sources */,
 				05A70D1D2E0C20A7007E9937 /* ContentView.swift in Sources */,
 				05A70D1E2E0C20A7007E9937 /* LiarsTableApp.swift in Sources */,
+				053814F32E14073A00E7CEFB /* AuthorizedFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		053815102E140E9800E7CEFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05A70D092E0C1D4D007E9937 /* LiarsTable */;
+			targetProxy = 0538150F2E140E9800E7CEFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		053815122E140E9800E7CEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AM64M5A8BU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DenisDenisov.LiarsTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiarsTable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LiarsTable";
+			};
+			name = Debug;
+		};
+		053815132E140E9800E7CEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AM64M5A8BU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DenisDenisov.LiarsTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiarsTable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LiarsTable";
+			};
+			name = Release;
+		};
 		05A70D132E0C1D4E007E9937 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -334,6 +502,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		053815112E140E9800E7CEFB /* Build configuration list for PBXNativeTarget "LiarsTableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				053815122E140E9800E7CEFB /* Debug */,
+				053815132E140E9800E7CEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05A70D052E0C1D4D007E9937 /* Build configuration list for PBXProject "LiarsTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -353,6 +530,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		0538151C2E1416E100E7CEFB /* XCLocalSwiftPackageReference "Modules/SettingStorageService" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/SettingStorageService;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		053814F42E14078600E7CEFB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.20.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		053814F52E14078600E7CEFB /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 053814F42E14078600E7CEFB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		0538151D2E1416ED00E7CEFB /* SettingStorageService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingStorageService;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05A70D022E0C1D4D007E9937 /* Project object */;
 }
