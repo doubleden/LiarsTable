@@ -41,3 +41,21 @@ struct AppFeature {
         .ifLet(\.$destination, action: \.destinationAction)
     }
 }
+
+
+// MARK: - AppFeatureDestination
+extension AppFeature {
+    @Reducer
+    enum AppFeatureDestination {
+        case onBoarding(OnBoardingFeature)
+        case authorized(AuthorizedFeature)
+        
+        @ObservableState
+        enum State: CaseReducerState, Equatable {
+            public typealias StateReducer = AppFeatureDestination
+            
+            case onBoarding(OnBoardingFeature.State)
+            case authorized(AuthorizedFeature.State)
+        }
+    }
+}
