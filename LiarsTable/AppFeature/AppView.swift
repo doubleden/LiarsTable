@@ -4,21 +4,40 @@
 
 import SwiftUI
 import ComposableArchitecture
+import SettingStorageService
 
 struct AppView: View {
-    let store: StoreOf<AppFeature>
+    @Bindable var store: StoreOf<AppFeature>
     
     var body: some View {
         VStack {
-            Text("AppView")
+            switch store.state.destination {
+            case .authorized:
+                if let store = store.scope(
+                    state: \.destination?.authorized,
+                    action: \.destinationAction.authorized
+                ) {
+                    AuthorizedView(store: store)
+                }
+            case .onBoarding:
+                if let store = store.scope(
+                    state: \.destination?.onBoarding,
+                    action: \.destinationAction.onBoarding
+                ) {
+                    OnBoardingView(store: store)
+                }
+            default:
+                EmptyView()
+            }
         }
+        .onAppear { store.send(.checkOnBoardingCompletion) }
     }
 }
 
 #Preview {
     AppView(
-        store: Store(initialState: AppFeature.State()) {
-            AppFeature()
-        }
+        store: Store(
+            initialState: AppFeature.State(),
+            reducer: { AppFeature() })
     )
 }

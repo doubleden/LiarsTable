@@ -11,6 +11,9 @@ struct OnBoardingView: View {
     var body: some View {
         VStack {
             Text("OnBoardingView")
+            Button("Done") {
+                store.send(.doneOnBoarding)
+            }
         }
     }
 }

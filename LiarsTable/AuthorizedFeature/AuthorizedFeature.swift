@@ -17,7 +17,7 @@ struct AuthorizedFeature {
     var body: some Reducer <State, Action> {
         Reduce { state, action in
             switch action {
-            default:
+            case .doSomething:
                 return .none
             }
         }
