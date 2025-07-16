@@ -9,12 +9,20 @@ struct OnBoardingView: View {
     let store: StoreOf<OnBoardingFeature>
     
     var body: some View {
-        VStack {
-            Text("OnBoardingView")
-            Button("Done") {
-                store.send(.doneOnBoarding)
+        ZStack {
+            VStack {
+                Text("OnBoardingView")
+                Text(store.currentPage.title)
+                Button(store.currentPage.buttonTitle) {
+                    store.send(.moveToNextPage)
+                }
             }
         }
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity
+        )
+        .background(Color.gray.opacity(0.2))
     }
 }
 

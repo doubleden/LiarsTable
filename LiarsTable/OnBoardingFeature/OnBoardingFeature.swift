@@ -6,16 +6,25 @@ struct OnBoardingFeature {
     
     @ObservableState
     struct State: Equatable {
+        var currentPage = Page.first
     }
     
     enum Action {
-        case doneOnBoarding
+        case moveToNextPage
+        case callbackToAppFeatureCompleteOnBoarding
     }
     
     var body: some Reducer <State, Action> {
         Reduce { state, action in
             switch action {
-            case .doneOnBoarding:
+            case .moveToNextPage:
+                switch state.currentPage {
+                case .first: state.currentPage = .second
+                case .second: state.currentPage = .third
+                case .third: return .send(.callbackToAppFeatureCompleteOnBoarding)
+                }
+                return .none
+            case .callbackToAppFeatureCompleteOnBoarding:
                 return .none
             }
         }

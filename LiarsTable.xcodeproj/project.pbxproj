@@ -15,6 +15,7 @@
 		054413792E141ACF00C56A92 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054413782E141ACF00C56A92 /* AppView.swift */; };
 		057941992E141B6500A6BD6F /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057941982E141B6500A6BD6F /* OnBoardingView.swift */; };
 		0579419B2E141B7800A6BD6F /* AuthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579419A2E141B7800A6BD6F /* AuthorizedView.swift */; };
+		057C98C92E27C2E700F59CDB /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C98C82E27C2E700F59CDB /* Page.swift */; };
 		05A70D1C2E0C20A7007E9937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A70D182E0C20A7007E9937 /* Assets.xcassets */; };
 		05A70D1D2E0C20A7007E9937 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A70D192E0C20A7007E9937 /* ContentView.swift */; };
 		05A70D1E2E0C20A7007E9937 /* LiarsTableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A70D1A2E0C20A7007E9937 /* LiarsTableApp.swift */; };
@@ -38,6 +39,7 @@
 		054413782E141ACF00C56A92 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		057941982E141B6500A6BD6F /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		0579419A2E141B7800A6BD6F /* AuthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedView.swift; sourceTree = "<group>"; };
+		057C98C82E27C2E700F59CDB /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		05A70D0A2E0C1D4D007E9937 /* LiarsTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiarsTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A70D182E0C20A7007E9937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A70D192E0C20A7007E9937 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		053814EF2E14073500E7CEFB /* OnBoardingFeature */ = {
 			isa = PBXGroup;
 			children = (
+				057C98C72E27C2DF00F59CDB /* Models */,
 				053814EE2E14073500E7CEFB /* OnBoardingFeature.swift */,
 				057941982E141B6500A6BD6F /* OnBoardingView.swift */,
 			);
@@ -98,6 +101,14 @@
 				0579419A2E141B7800A6BD6F /* AuthorizedView.swift */,
 			);
 			path = AuthorizedFeature;
+			sourceTree = "<group>";
+		};
+		057C98C72E27C2DF00F59CDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				057C98C82E27C2E700F59CDB /* Page.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		05A70D012E0C1D4D007E9937 = {
@@ -257,6 +268,7 @@
 				053814E92E1406FF00E7CEFB /* AppFeature.swift in Sources */,
 				057941992E141B6500A6BD6F /* OnBoardingView.swift in Sources */,
 				054413792E141ACF00C56A92 /* AppView.swift in Sources */,
+				057C98C92E27C2E700F59CDB /* Page.swift in Sources */,
 				05A70D1D2E0C20A7007E9937 /* ContentView.swift in Sources */,
 				05A70D1E2E0C20A7007E9937 /* LiarsTableApp.swift in Sources */,
 				053814F32E14073A00E7CEFB /* AuthorizedFeature.swift in Sources */,

@@ -31,7 +31,7 @@ struct AppFeature {
             case .navigateToOnBoarding:
                 state.destination = .onBoarding(OnBoardingFeature.State())
                 return .none
-            case .destinationAction(.presented(.onBoarding(.doneOnBoarding))):
+            case .destinationAction(.presented(.onBoarding(.callbackToAppFeatureCompleteOnBoarding))):
                 settingStorageService.setOnBoardingState(true)
                 return .send(.checkOnBoardingCompletion)
             default:
