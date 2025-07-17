@@ -23,6 +23,10 @@
 		057C98F12E27D61600F59CDB /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C98EE2E27D61600F59CDB /* OptionsView.swift */; };
 		05A70D1C2E0C20A7007E9937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A70D182E0C20A7007E9937 /* Assets.xcassets */; };
 		05A70D1E2E0C20A7007E9937 /* LiarsTableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A70D1A2E0C20A7007E9937 /* LiarsTableApp.swift */; };
+		05ECCBDE2E2949C700B978C5 /* LocalGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECCBDC2E2949C700B978C5 /* LocalGameView.swift */; };
+		05ECCBDF2E2949C700B978C5 /*  LocalGameFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECCBDB2E2949C700B978C5 /*  LocalGameFeature.swift */; };
+		05ECCBE32E294DB100B978C5 /*  OnlineGameFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECCBE02E294DB100B978C5 /*  OnlineGameFeature.swift */; };
+		05ECCBE42E294DB100B978C5 /* OnlineGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECCBE12E294DB100B978C5 /* OnlineGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		05A70D182E0C20A7007E9937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A70D1A2E0C20A7007E9937 /* LiarsTableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiarsTableApp.swift; sourceTree = "<group>"; };
 		05A70D202E0C26F6007E9937 /* SettingStorageService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SettingStorageService; path = Modules/SettingStorageService; sourceTree = "<group>"; };
+		05ECCBDB2E2949C700B978C5 /*  LocalGameFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " LocalGameFeature.swift"; sourceTree = "<group>"; };
+		05ECCBDC2E2949C700B978C5 /* LocalGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalGameView.swift; sourceTree = "<group>"; };
+		05ECCBE02E294DB100B978C5 /*  OnlineGameFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OnlineGameFeature.swift"; sourceTree = "<group>"; };
+		05ECCBE12E294DB100B978C5 /* OnlineGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -182,9 +190,29 @@
 				053814EF2E14073500E7CEFB /* OnBoardingFeature */,
 				053814F22E14073A00E7CEFB /* AuthorizedFeature */,
 				057C98F22E27D62500F59CDB /* TabsFeature */,
+				05ECCBDD2E2949C700B978C5 /* LocalGame */,
+				05ECCBE22E294DB100B978C5 /* OnlineGame */,
 				05A70D182E0C20A7007E9937 /* Assets.xcassets */,
 			);
 			path = LiarsTable;
+			sourceTree = "<group>";
+		};
+		05ECCBDD2E2949C700B978C5 /* LocalGame */ = {
+			isa = PBXGroup;
+			children = (
+				05ECCBDB2E2949C700B978C5 /*  LocalGameFeature.swift */,
+				05ECCBDC2E2949C700B978C5 /* LocalGameView.swift */,
+			);
+			path = LocalGame;
+			sourceTree = "<group>";
+		};
+		05ECCBE22E294DB100B978C5 /* OnlineGame */ = {
+			isa = PBXGroup;
+			children = (
+				05ECCBE02E294DB100B978C5 /*  OnlineGameFeature.swift */,
+				05ECCBE12E294DB100B978C5 /* OnlineGameView.swift */,
+			);
+			path = OnlineGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,8 +342,12 @@
 				057C98F02E27D61600F59CDB /*  OptionsFeature.swift in Sources */,
 				057C98F12E27D61600F59CDB /* OptionsView.swift in Sources */,
 				057C98EB2E27D60D00F59CDB /*  LobbyFeature.swift in Sources */,
+				05ECCBE32E294DB100B978C5 /*  OnlineGameFeature.swift in Sources */,
+				05ECCBE42E294DB100B978C5 /* OnlineGameView.swift in Sources */,
 				057C98EC2E27D60D00F59CDB /* LobbyView.swift in Sources */,
 				054413792E141ACF00C56A92 /* AppView.swift in Sources */,
+				05ECCBDE2E2949C700B978C5 /* LocalGameView.swift in Sources */,
+				05ECCBDF2E2949C700B978C5 /*  LocalGameFeature.swift in Sources */,
 				057C98C92E27C2E700F59CDB /* Page.swift in Sources */,
 				057C98E62E27D56E00F59CDB /* Tab.swift in Sources */,
 				05A70D1E2E0C20A7007E9937 /* LiarsTableApp.swift in Sources */,

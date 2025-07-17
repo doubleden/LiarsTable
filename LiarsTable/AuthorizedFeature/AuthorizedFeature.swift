@@ -12,7 +12,6 @@ struct AuthorizedFeature {
     
     enum Action {
         case selectTab(Tab)
-        
     }
     
     var body: some Reducer <State, Action> {

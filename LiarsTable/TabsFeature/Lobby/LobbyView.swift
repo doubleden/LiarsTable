@@ -7,12 +7,25 @@
 import SwiftUI
 import ComposableArchitecture
 
+@ViewAction(for: LobbyFeature.self)
 struct LobbyView: View {
-    let store: StoreOf<LobbyFeature>
+    @Bindable var store: StoreOf<LobbyFeature>
     
     var body: some View {
         VStack {
-            Text("LobbyView")
+            Group {
+                Button("Local Game") { send(.didTapOnLocalGameButton) }
+                Button("Online Game") { send(.didTapOnOnlineGameButton) }
+            }
+            .buttonStyle(.borderedProminent)
+        }
+        .fullScreenCover(item: $store.scope(state: \.destination, action: \.destinationAction)) { store in
+            switch store.case {
+            case .localGame(let store):
+                LocalGameView(store: store)
+            case .onlineGame(let store):
+                OnlineGameView(store: store)
+            }
         }
     }
 }
