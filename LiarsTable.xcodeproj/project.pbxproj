@@ -45,6 +45,9 @@
 		053814F12E14073A00E7CEFB /* AuthorizedFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedFeature.swift; sourceTree = "<group>"; };
 		0538150B2E140E9800E7CEFB /* LiarsTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiarsTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		054413782E141ACF00C56A92 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		055D80E72E2EB1D8007A0AB1 /* CommonModels */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CommonModels; path = Modules/CommonModels; sourceTree = "<group>"; };
+		055D80E82E2EB1FF007A0AB1 /* LocalGame */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LocalGame; path = Modules/LocalGame; sourceTree = "<group>"; };
+		055D80E92E2ECA41007A0AB1 /* DeckBuilder */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DeckBuilder; path = Modules/DeckBuilder; sourceTree = "<group>"; };
 		057941982E141B6500A6BD6F /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		0579419A2E141B7800A6BD6F /* AuthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedView.swift; sourceTree = "<group>"; };
 		057C98C82E27C2E700F59CDB /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
@@ -168,6 +171,9 @@
 			children = (
 				05A70D1B2E0C20A7007E9937 /* LiarsTable */,
 				0538150C2E140E9800E7CEFB /* LiarsTableTests */,
+				055D80E92E2ECA41007A0AB1 /* DeckBuilder */,
+				055D80E82E2EB1FF007A0AB1 /* LocalGame */,
+				055D80E72E2EB1D8007A0AB1 /* CommonModels */,
 				05A70D202E0C26F6007E9937 /* SettingStorageService */,
 				05A70D0B2E0C1D4D007E9937 /* Products */,
 			);
