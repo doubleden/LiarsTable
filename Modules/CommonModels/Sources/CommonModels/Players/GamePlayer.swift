@@ -7,4 +7,7 @@
 
 import Foundation
 
-public protocol GamePlayer {}
+public protocol GamePlayer {
+    var playerCards: [Card] { get }
+    func dealCardsToPlayer(_ cards: [Card])
+}

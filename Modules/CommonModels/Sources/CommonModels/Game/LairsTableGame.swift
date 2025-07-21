@@ -7,6 +7,8 @@
 
 import Foundation
 
-public protocol LairsTableGame {
-    
+public protocol LairsTableGame: Actor {
+    var state: GameState { get }
+    var gamePlayersCount: GamePlayersCount { get }
+    var gameMainRank: Card.Rank? { get }
 }

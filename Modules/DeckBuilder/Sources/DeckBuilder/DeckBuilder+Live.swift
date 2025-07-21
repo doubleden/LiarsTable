@@ -19,6 +19,7 @@ extension DeckBuilder {
             totalDeck.append(contentsOf: Card.buildCard(rank: .queen, count: usualSuits))
             totalDeck.append(contentsOf: Card.buildCard(rank: .jack, count: usualSuits))
             totalDeck.append(contentsOf: Card.buildCard(rank: .joker, count: joker))
+            totalDeck.shuffle()
             
             return GameDeck(cards: totalDeck)
         }

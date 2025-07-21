@@ -12,13 +12,15 @@ let package = Package(
             targets: ["LocalGame"]),
     ],
     dependencies: [
-        .package(path: "../CommonModels")
+        .package(path: "../CommonModels"),
+        .package(path: "../DeckBuilder")
     ],
     targets: [
         .target(
             name: "LocalGame",
             dependencies: [
-                .product(name: "CommonModels", package: "CommonModels")
+                .product(name: "CommonModels", package: "CommonModels"),
+                .product(name: "DeckBuilder", package: "DeckBuilder")
             ]
         ),
 

@@ -1,11 +1,11 @@
 
 import CommonModels
 
-public typealias BuildDockCallback = @Sendable (GamePLayersCount) -> GameDeck
-public typealias CardsCountCallback = @Sendable (GamePLayersCount) -> Int
+public typealias BuildDockCallback = @Sendable (GamePlayersCount) -> GameDeck
+public typealias CardsCountCallback = @Sendable (GamePlayersCount) -> Int
 
 public struct DeckBuilder: Sendable {
-    public var buildDock: BuildDockCallback
+    public var buildDeck: BuildDockCallback
     
     public static let usualSuitsCount: CardsCountCallback = { playersCount in
         switch playersCount {
@@ -28,6 +28,6 @@ public struct DeckBuilder: Sendable {
     public init(
         buildDock: @escaping BuildDockCallback,
     ) {
-        self.buildDock = buildDock
+        self.buildDeck = buildDock
     }
 }
